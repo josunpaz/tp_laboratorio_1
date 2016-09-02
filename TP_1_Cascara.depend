@@ -6,3 +6,8 @@
 
 1472613935 c:\users\josue\documents\github\tp_laboratorio_1\funciones.h
 
+1472614670 source:c:\users\josue\documents\github\tp_laboratorio_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+

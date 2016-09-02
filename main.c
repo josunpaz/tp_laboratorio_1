@@ -4,6 +4,10 @@
 
 int main()
 {
+    int numeroUno;
+    int numeroDos;
+    float total;
+
     char seguir='s';
     int opcion=0;
 
@@ -17,15 +21,20 @@ int main()
         printf("6- Calcular la multiplicacion (A*B)\n");
         printf("7- Calcular el factorial (A!)\n");
         printf("8- Calcular todas las operacione\n");
-        printf("9- Salir\n");
+        printf("9- Salir\n\n");
 
+        printf("Ingrese la opcion deseada:");
         scanf("%d",&opcion);
 
         switch(opcion)
         {
             case 1:
+                printf("Ingrese el 1er operando");
+                scanf("%d",&numeroUno);
                 break;
             case 2:
+                printf("Ingrese el 2do operando");
+                scanf("%d",&numeroDos);
                 break;
             case 3:
                 break;
