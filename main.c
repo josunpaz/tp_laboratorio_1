@@ -13,6 +13,7 @@ int main()
 
     while(seguir=='s')
     {
+        /*
         printf("1- Ingresar 1er operando (A=x)\n");
         printf("2- Ingresar 2do operando (B=y)\n");
         printf("3- Calcular la suma (A+B)\n");
@@ -25,6 +26,8 @@ int main()
 
         printf("Ingrese la opcion deseada:");
         scanf("%d",&opcion);
+        */
+
 
         switch(opcion)
         {
@@ -37,6 +40,7 @@ int main()
                 scanf("%d",&numeroDos);
                 break;
             case 3:
+                int funSuma (numeroUno,numeroDos);
                 break;
             case 4:
                 break;
