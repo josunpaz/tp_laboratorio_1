@@ -19,3 +19,24 @@ int funSuma(int a, int b)
     return fin;
 }
 
+int funResta( int a, int b)
+{
+    int fin;
+    fin= a-b;
+    return fin;
+}
+
+int funMult(int a, int b)
+{
+    int fin;
+    fin= a*b;
+    return fin;
+
+}
+
+int fundiv(int a, int b)
+{
+    int fin;
+    fin=a/b;
+    return fin;
+}

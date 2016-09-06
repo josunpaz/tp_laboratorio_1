@@ -6,14 +6,14 @@ int main()
 {
     int numeroUno;
     int numeroDos;
-    float total;
+    int total;
 
     char seguir='s';
     int opcion=0;
 
     while(seguir=='s')
     {
-        /*
+
         printf("1- Ingresar 1er operando (A=x)\n");
         printf("2- Ingresar 2do operando (B=y)\n");
         printf("3- Calcular la suma (A+B)\n");
@@ -26,7 +26,7 @@ int main()
 
         printf("Ingrese la opcion deseada:");
         scanf("%d",&opcion);
-        */
+
 
 
         switch(opcion)
@@ -40,13 +40,20 @@ int main()
                 scanf("%d",&numeroDos);
                 break;
             case 3:
-                int funSuma (numeroUno,numeroDos);
+                printf("\nLa suma de los operandos es: %d\n",funSuma(numeroUno,numeroDos));
+                system("pause");
                 break;
             case 4:
+                printf("\n La resta de los operandos es: %d\n",funResta(numeroUno,numeroDos));
+                system("pause");
                 break;
             case 5:
+                printf("\n la division de los operandos es: %d \n", fundiv(numeroUno,numeroDos));
+                 system("pause");
                 break;
             case 6:
+                printf("\n la multiplicacion de los operandos es: %d \n",funMult(numeroUno,numeroDos));
+                 system("pause");
                 break;
             case 7:
                 break;
