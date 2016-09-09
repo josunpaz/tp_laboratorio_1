@@ -8,7 +8,10 @@
 #endif // FUNCIONES_H_INCLUDED
 
 
-int funSuma(int, int);
-int funResta(int,int);
-int funMult(int, int);
-int fundiv(int, int);
+float funSuma(float, float);
+float funResta(float,float);
+float funMult(float, float);
+float fundiv(float, float);
+float menu(float);
+double factorial(float);
+void validar_factorial(float);
