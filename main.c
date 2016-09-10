@@ -6,7 +6,6 @@ int main()
 {
     float numeroUno= 0;
     float numeroDos= 0;
-    int total;
     char seguir='s';
     int opcion=0;
 
@@ -14,7 +13,6 @@ int main()
     while(seguir=='s')
     {
 system("cls");
-system("color 2");
 printf("1- Ingresar 1er operando (A=%.2f)\n",numeroUno);
         printf("2- Ingresar 2do operando (B=%.2f)\n",numeroDos);
         printf("3- Calcular la suma (A+B)\n");
@@ -40,26 +38,32 @@ printf("1- Ingresar 1er operando (A=%.2f)\n",numeroUno);
                 scanf("%f",&numeroDos);
                 break;
             case 3:
-                printf("\nLa suma de los operandos es: %.2f\n",funSuma(numeroUno,numeroDos));
+                funSuma(numeroUno,numeroDos);
                 system("pause");
                 break;
             case 4:
-                printf("\n La resta de los operandos es: %.2f\n",funResta(numeroUno,numeroDos));
+                funResta(numeroUno,numeroDos);
                 system("pause");
                 break;
             case 5:
-                printf("\n La division de los operandos es: %.2f\n",fundiv(numeroUno,numeroDos));
+                fundiv(numeroUno,numeroDos);
                 system("pause");
                 break;
             case 6:
-                printf("\n la multiplicacion de los operandos es: %.2f \n",funMult(numeroUno,numeroDos));
-                 system("pause");
+                funMult(numeroUno,numeroDos);
+                system("pause");
                 break;
             case 7:
                 validar_factorial(numeroUno);
                 system("pause");
                 break;
             case 8:
+                funSuma(numeroUno,numeroDos);
+                funResta(numeroUno,numeroDos);
+                fundiv(numeroUno,numeroDos);
+                funMult(numeroUno,numeroDos);
+                validar_factorial(numeroUno);
+                system("pause");
                 break;
             case 9:
                 seguir = 'n';

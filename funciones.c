@@ -14,31 +14,63 @@
 
 float funSuma(float a, float b)
 {
+    if(a==0 && b==0)
+    {
+        return printf("\n Uno de los valores debe ser desigual a 0 \n");
+    }
+    else
+    {
     float fin;
     fin= a + b;
-    return fin;
+    return printf("\n El resultado de la suma es: %.2f \n", fin);
+    }
 }
 
 float funResta( float a, float b)
 {
+    if(a==0 && b==0)
+    {
+        return printf("\n Uno de los valores debe ser desigual a 0 \n");
+    }
+    else
+    {
     float fin;
-    fin= a-b;
-    return fin;
+    fin= a - b;
+    return printf("\n El resultado de la resta es: %.2f \n", fin);
+    }
+
 }
 
 float funMult(float a, float b)
 {
+     if(a==0 && b==0)
+    {
+        return printf("\n Uno de los valores debe ser desigual a 0 \n");
+    }
+    else
+    {
     float fin;
-    fin= a*b;
-    return fin;
+    fin= a * b;
+    return printf("\n El resultado de la multiplicacion es: %.2f \n", fin);
+    }
 
 }
 
 float fundiv(float a, float b)
 {
     float fin;
+
+    if(b == 0)
+    {
+    return printf(" \n Error, no se puede dividir por cero \n");
+
+    }
+    else
+    {
     fin=a/b;
-    return fin;
+    return printf(" \n El resultado de la division es: %.5f \n", fin);
+    }
+
 }
 
 double factorial(float numeroUno)
@@ -56,22 +88,22 @@ void validar_factorial(float numeroUno)
 {
     double fact;
 
-    if(numeroUno < 0)
+    if(numeroUno < 1)
     {
-       printf("Error. No se puede calcular el factorial de un numero negativo.Reingrese el numero\n");
+       printf(" \n Error. No se puede calcular el factorial de un numero negativo o de cero.Reingrese el numero \n \n");
     }
     else if(numeroUno > 170)
     {
-        printf("El resultado es INFINITO\n");
+        printf(" \n El resultado del factoreo de %.2f es infinito \n",numeroUno);
     }
     else if(floor(numeroUno) != numeroUno)
     {
-        printf("ERROR. Debe ingresar un numero entero para calcular el factorial\n");
+        printf(" \n ERROR. Debe ingresar un numero entero para calcular el factorial\n");
     }
     else{
 
         fact= factorial(numeroUno);
-        printf("El factorial de %.0f es %.0f\n", numeroUno, fact);
+        printf(" \n El factorial de %.0f es %.0f\n", numeroUno, fact);
     }
 
 
