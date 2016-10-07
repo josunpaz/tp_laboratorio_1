@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1475871935 source:c:\users\josue\desktop\parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1475873013 c:\users\josue\desktop\parcial\parcial\utn.h
+
+1475873228 source:c:\users\josue\desktop\parcial\parcial\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+

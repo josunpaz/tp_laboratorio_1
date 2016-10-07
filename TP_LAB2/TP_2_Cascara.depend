@@ -78,3 +78,17 @@
 	"funciones.h"
 	<string.h>
 
+1475463920 source:c:\users\josue\documents\github\tp_lab\tp_lab2\funciones.c
+	"funciones.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1475463401 c:\users\josue\documents\github\tp_lab\tp_lab2\funciones.h
+
+1475463658 source:c:\users\josue\documents\github\tp_lab\tp_lab2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+
