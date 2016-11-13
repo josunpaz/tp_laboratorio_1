@@ -435,11 +435,49 @@ return returnAux;
  */
 int al_sort(ArrayList* pList, int (*pFunc)(void* ,void*), int order)
 {
-    int returnAux = -1;
+int returnAux = -1;
+int i = 0;
+int j = 0;
+int length = al_len(pList);
+//void* aux;
 
-    return returnAux;
+if(pList != NULL && pFunc != NULL && (order == 1 || order == 0))
+{
+    for(i = 0; i < length-1; i++)
+    {
+        for(j = i+1; j<length; j++)
+        {
+            if(order==1)
+            {
+                if(pFunc(*(pList->pElements+i) , *(pList->pElements+j))>0)
+                al_swap(*(pList->pElements+i),*(pList->pElements+j));
+                //aux = pList->pElements[i];
+                //pList->pElements[i] = pList->pElements[j];
+                //pList->pElements[j] = aux;
+                returnAux = 0;
+            }else
+            {
+                if((order==0) && pFunc(*(pList->pElements+i),*(pList->pElements+j))<0)
+                    al_swap(*(pList->pElements+i),*(pList->pElements+j));
+                    //aux = pList->pElements[i];
+                    //pList->pElements[i] = pList->pElements[j];
+                    //pList->pElements[j] = aux;
+            }
+        }
+    }
 }
 
+return returnAux;
+}
+
+
+void al_swap(void* a, void* b)
+{
+void* aux;
+aux = a;
+a = b;
+b = aux;
+}
 
 /** \brief Increment the number of elements in pList in AL_INCREMENT elements.
  * \param pList ArrayList* Pointer to arrayList
