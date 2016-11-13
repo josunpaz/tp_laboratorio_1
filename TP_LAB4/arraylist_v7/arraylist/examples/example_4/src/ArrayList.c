@@ -361,31 +361,12 @@ int al_isEmpty(ArrayList* pList)
 void* al_pop(ArrayList* pList,int index)
 {
     void* returnAux = NULL;
-
-
-
-    int i;
-
-    for(i=0; i<pList->size; i++)
+    if(pList != NULL && index >= 0 && index <= pList->size)
     {
-         returnAux=pList->get(pList,i);
-
-
-
-        Employee* e=(Employee*) returnAux;
-        printEmployee(e);
-    }/*
-    if (pList != NULL && index >=0 && index < pList->size)
-    {
-        returnAux=pList->get(pList,index);
-
-       contract(pList,index);
-
-        Employee* e=(Employee*) returnAux;
-        printEmployee(e);
-
-    }*/
-
+        returnAux = pList->get(pList,index);
+        pList->remove(pList, index);
+        contract(pList,index);
+    }
     return returnAux;
 }
 
