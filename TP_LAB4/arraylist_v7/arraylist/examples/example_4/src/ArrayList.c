@@ -381,9 +381,18 @@ void* al_pop(ArrayList* pList,int index)
  */
 ArrayList* al_subList(ArrayList* pList,int from,int to)
 {
-    void* returnAux = NULL;
+int i = from;
+ArrayList* returnAux = NULL;
 
-    return returnAux ;
+if(pList != NULL && from >= 0 && to <= pList->size && from < to)
+{
+    returnAux = al_newArrayList();
+    for(i=from; i<to; i++)
+    {
+        pList->add(returnAux, pList->get(pList, i));
+    }
+}
+return returnAux ;
 }
 
 
@@ -398,9 +407,23 @@ ArrayList* al_subList(ArrayList* pList,int from,int to)
  */
 int al_containsAll(ArrayList* pList,ArrayList* pList2)
 {
-    int returnAux = -1;
+int returnAux = -1, i = 0;
+void* AuxElement;
 
-    return returnAux;
+if(pList2 != NULL && pList != NULL)
+{
+    returnAux = 1;
+    for (i = 0; i < pList2->size; i++)
+    {
+        AuxElement = al_get(pList2,i);
+        if(al_contains(pList, AuxElement) == 0)
+        {
+            returnAux = 0;
+            break;
+        }
+    }
+}
+return returnAux;
 }
 
 /** \brief Sorts objects of list, use compare pFunc
