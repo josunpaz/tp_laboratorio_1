@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1479507922 source:e:\prueba\prueba\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arrayList.h"
+
+1479171694 e:\prueba\prueba\arraylist.h
+
+1479172340 source:e:\prueba\prueba\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+

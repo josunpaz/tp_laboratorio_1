@@ -1,17 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../inc/ArrayList.h"
-#include "../inc/Employee.h"
-
-// funciones privadas
-int resizeUp(ArrayList* pList); //realloc
-int expand(ArrayList* pList,int index);
-int contract(ArrayList* pList,int index);//contrario al resizeUP (-1)
-//cuando eliminemos un elemento de la lista
+#include "ArrayList.h"
 #define AL_INCREMENT      10
 #define AL_INITIAL_VALUE  10
-//___________________
+int resizeUp(ArrayList* pList);
+int expand(ArrayList* pList,int index);
+int contract(ArrayList* pList,int index);
+
+int menu()
+{
+    int opc;
+    printf("1-Agregar nuevo empleado.\n");
+    printf("2-Modificar empleado.\n");
+    printf("3-Borrar empleado.\n");
+    printf("4-Listar.\n");
+    printf("5-Salir.\n");
+    scanf("%d",&opc);
+    return opc;
+}
+
+/** \brief
+ * \param
+ * \return
+ *
+ */
+
+eEmpleado* empleado_add()
+{
+    eEmpleado* aux=NULL;
+    aux=malloc((sizeof(eEmpleado)));
+    return aux;
+}
+
+void cargarEmpleadoAux(eEmpleado* empleado)
+{
+    char auxChar[50];
+    int auxInt;
+
+    printf("Ingrese nombre: ");
+    fflush(stdin);
+    gets(auxChar);
+    printf("Ingrese edad: ");
+    scanf("%d",&auxInt);
+
+
+}
 
 /** \brief Allocate a new arrayList with AL_INITIAL_VALUE elements.
  * \param void
